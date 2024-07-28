@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المصلي</title>
+    <link rel="icon" type="image/png" href="/img/1.png" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-[url('/dist/img/islamic-background.jpg')] bg-no-repeat bg-fixed bg-slate-950 bg-opacity-30 bg-cover"
+  >
+    <div class="bg-slate-950 bg-opacity-30 bg-cover">
+      <div class="container mx-auto px-4">
+        <!-- header -->
+        <div class="py-[100px] text-center">
+          <h1
+            class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold font-second text-white"
+          >
+            المصلي
+          </h1>
+          <div class="mt-10 flex flex-col items-center justify-center gap-2">
+            <div
+              id="selectField"
+              class="flex items-center justify-center gap-2 px-4 sm:px-6 md:px-8 py-2 sm:py-4 bg-white rounded-xl cursor-pointer"
+            >
+              <img
+                src="./img/chevron-down.png"
+                class="w-4 h-auto sm:w-5"
+                alt=""
+              />
+              <p id="text-selected" class="font-main text-sm sm:text-lg">
+                الرجاء اختيار المحافظة.
+              </p>
+            </div>
+            <ul
+              id="city-list"
+              class="bg-white rounded-lg py-2 max-h-80 overflow-y-auto mt-2 w-full sm:w-[300px] md:w-[350px] lg:w-[400px] mx-auto hidden"
+            >
+              <!-- City options will be added dynamically here -->
+            </ul>
+          </div>
+          <div class="mt-16">
+            <h1
+              id="city-title"
+              class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-second mb-2 text-white"
+            >
+              المحافظة
+            </h1>
+            <h3
+              id="date"
+              class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-second mb-8 text-[#0ba953]"
+            >
+              التاريخ
+            </h3>
+            <div>
+              <h3
+                class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-second text-white mb-4"
+              >
+                الساعة
+              </h3>
+              <h3
+                id="time"
+                class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-second text-[#0ba953] inline bg-white rounded-xl px-6 py-2"
+              >
+                الساعة
+              </h3>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- cards -->
+          <div
+            class="bg-white w-full sm:w-[300px] md:w-[350px] lg:w-[400px] flex flex-col items-center justify-center px-4 py-4 rounded-xl mx-auto"
+          >
+            <img
+              class="w-[100px] sm:w-[150px] mb-4 ml-20"
+              src="./img/subah.png"
+              alt=""
+            />
+            <h2 class="text-4xl sm:text-5xl font-semibold font-main mb-2">
+              الفجر
+            </h2>
+            <h4
+              id="fajr-time"
+              class="text-xl sm:text-3xl font-semibold font-main"
+            >
+              الوقت
+            </h4>
+          </div>
+
+          <div
+            class="bg-white w-full sm:w-[300px] md:w-[350px] lg:w-[400px] flex flex-col items-center justify-center px-4 py-4 rounded-xl mx-auto"
+          >
+            <img
+              class="w-[100px] sm:w-[150px] mb-4"
+              src="./img/shorouk.png"
+              alt=""
+            />
+            <h2 class="text-4xl sm:text-5xl font-semibold font-main mb-2">
+              الشروق
+            </h2>
+            <h4
+              id="shorouk-time"
+              class="text-xl sm:text-3xl font-semibold font-main"
+            >
+              الوقت
+            </h4>
+          </div>
+
+          <div
+            class="bg-white w-full sm:w-[300px] md:w-[350px] lg:w-[400px] flex flex-col items-center justify-center px-4 py-4 rounded-xl mx-auto"
+          >
+            <img
+              class="w-[100px] sm:w-[150px] mb-4 ml-20"
+              src="./img/dhuhr.png"
+              alt=""
+            />
+            <h2 class="text-4xl sm:text-5xl font-semibold font-main mb-2">
+              الظهر
+            </h2>
+            <h4
+              id="dhuhr-time"
+              class="text-xl sm:text-3xl font-semibold font-main"
+            >
+              الوقت
+            </h4>
+          </div>
+
+          <div
+            class="bg-white w-full sm:w-[300px] md:w-[350px] lg:w-[400px] flex flex-col items-center justify-center px-4 py-4 rounded-xl mx-auto"
+          >
+            <img
+              class="w-[100px] sm:w-[150px] mb-4 ml-20"
+              src="./img/asr.png"
+              alt=""
+            />
+            <h2 class="text-4xl sm:text-5xl font-semibold font-main mb-2">
+              العصر
+            </h2>
+            <h4
+              id="asr-time"
+              class="text-xl sm:text-3xl font-semibold font-main"
+            >
+              الوقت
+            </h4>
+          </div>
+
+          <div
+            class="bg-white w-full sm:w-[300px] md:w-[350px] lg:w-[400px] flex flex-col items-center justify-center px-4 py-4 rounded-xl mx-auto"
+          >
+            <img
+              class="w-[100px] sm:w-[150px] mb-4 ml-20"
+              src="./img/maghreb.png"
+              alt=""
+            />
+            <h2 class="text-4xl sm:text-5xl font-semibold font-main mb-2">
+              المغرب
+            </h2>
+            <h4
+              id="maghreb-time"
+              class="text-xl sm:text-3xl font-semibold font-main"
+            >
+              الوقت
+            </h4>
+          </div>
+
+          <div
+            class="bg-white w-full sm:w-[300px] md:w-[350px] lg:w-[400px] flex flex-col items-center justify-center px-4 py-4 rounded-xl mx-auto"
+          >
+            <img
+              class="w-[100px] sm:w-[150px] mb-4 ml-20"
+              src="./img/isha.png"
+              alt=""
+            />
+            <h2 class="text-4xl sm:text-5xl font-semibold font-main mb-2">
+              العشاء
+            </h2>
+            <h4
+              id="isha-time"
+              class="text-xl sm:text-3xl font-semibold font-main"
+            >
+              الوقت
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

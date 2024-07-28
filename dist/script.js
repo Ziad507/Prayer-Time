@@ -36,7 +36,7 @@ const governorates = {
 
 // Populate city select list
 for (const [arabicName, englishName] of Object.entries(governorates)) {
-  const option = document.createElement("option");
+  const option = document.createElement("li");
   option.classList.add(
     "text-lg",
     "sm:text-xl",
@@ -56,7 +56,7 @@ for (const [arabicName, englishName] of Object.entries(governorates)) {
   };
 
   option.value = arabicName;
-  option.text = arabicName;
+  option.innerHTML = arabicName;
   citySelect.appendChild(option);
 }
 
@@ -99,7 +99,7 @@ function prayerTime(city) {
   const currentYear = date.getFullYear();
   const currentDay = date.getDate();
 
-  let url = `http://api.aladhan.com/v1/calendarByCity/${currentYear}/${currentMonth}?city=${city}&country=EGY`;
+  let url = `http://api.aladhan.com/v1/calendarByCity?city=${city}&country=EG&method=2&month=${currentMonth}&year=${currentYear}`;
 
   axios
     .get(url)
@@ -107,7 +107,7 @@ function prayerTime(city) {
       console.log("API Response:", response.data); // Debugging: Check the full response
       const data = response.data.data;
       const timings = data.find(
-        (day) => parseInt(day.date.gregorian.date) === currentDay
+        (day) => parseInt(day.date.gregorian.day) === currentDay
       );
 
       if (timings) {
@@ -150,7 +150,8 @@ function prayerTime(city) {
 
 // Function to convert time to 12-hour format
 function convertTo12HourFormat(time) {
-  const [hour, minute] = time.split(":");
+  const timeParts = time.split(" ");
+  const [hour, minute] = timeParts[0].split(":");
   let period = "AM";
   let hour12 = parseInt(hour, 10);
 

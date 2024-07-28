@@ -619,6 +619,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.ml-20{
+  margin-left: 5rem;
+}
+
 .mt-10{
   margin-top: 2.5rem;
 }
@@ -629,10 +633,6 @@ video {
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mb-3{
-  margin-bottom: 0.75rem;
 }
 
 .block{
@@ -729,8 +729,8 @@ video {
   --tw-bg-opacity: 0.3;
 }
 
-.bg-\[url\(\'\/img\/islamic-background\.jpg\'\)\]{
-  background-image: url('/img/islamic-background.jpg');
+.bg-\[url\(\'\/dist\/img\/islamic-background\.jpg\'\)\]{
+  background-image: url('/dist/img/islamic-background.jpg');
 }
 
 .bg-cover{
@@ -828,10 +828,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#isha\.png\]{
-  color: #isha.png;
 }
 
 .hover\:bg-\[\#0ba953\]:hover{
