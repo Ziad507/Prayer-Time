@@ -1,5 +1,3 @@
-// JavaScript code
-
 let selectField = document.getElementById("selectField");
 let selectText = document.getElementById("text-selected");
 let citySelect = document.getElementById("city-list");
@@ -101,12 +99,11 @@ function prayerTime(city) {
 
   let url = `http://api.aladhan.com/v1/calendarByCity?city=${city}&country=EG&method=2&month=${currentMonth}&year=${currentYear}`;
 
-  axios
-    .get(url)
-    .then((response) => {
-      console.log("API Response:", response.data); // Debugging: Check the full response
-      const data = response.data.data;
-      const timings = data.find(
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("API Response:", data); // Debugging: Check the full response
+      const timings = data.data.find(
         (day) => parseInt(day.date.gregorian.day) === currentDay
       );
 
