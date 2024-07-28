@@ -3,7 +3,7 @@ let selectText = document.getElementById("text-selected");
 let citySelect = document.getElementById("city-list");
 
 const governorates = {
-  القاهرة: "Al Qāhirah",
+  القاهرة: "Cairo",
   الجيزة: "Al Jīzah",
   الإسكندرية: "Al Iskandarīyah",
   الدقهلية: "Ad Daqahlīyah",
