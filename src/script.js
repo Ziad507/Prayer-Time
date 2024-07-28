@@ -97,7 +97,7 @@ function prayerTime(city) {
   const currentYear = date.getFullYear();
   const currentDay = date.getDate();
 
-  let url = `http://api.aladhan.com/v1/calendarByCity?city=${city}&country=EG&method=2&month=${currentMonth}&year=${currentYear}`;
+  let url = `https://api.aladhan.com/v1/calendarByCity?city=${city}&country=EG&method=2&month=${currentMonth}&year=${currentYear}`;
 
   fetch(url)
     .then((response) => response.json())
