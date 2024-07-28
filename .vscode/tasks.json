@@ -4,7 +4,7 @@
     {
       "label": "Build CSS",
       "type": "shell",
-      "command": "npx tailwindcss -i ./dist/input.css -o ./dist/output.css --watch",
+      "command": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
       "group": "build",
       "problemMatcher": [],
       "isBackground": true,
